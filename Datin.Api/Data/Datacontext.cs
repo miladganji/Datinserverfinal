@@ -1,4 +1,5 @@
 ﻿using Datin.Api.Data.entities;
+using Datin.Api.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,6 @@ namespace Datin.Api.Data
         }
 
         public DbSet<Values> tblValues{ get; set; }
+        public DbSet<Users>  tblUsers{ get; set; }
     }
 }
