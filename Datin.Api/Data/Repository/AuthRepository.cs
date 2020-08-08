@@ -1,5 +1,6 @@
 ﻿using Datin.Api.Data.Contract;
 using Datin.Api.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +16,18 @@ namespace Datin.Api.Data.Repository
         {
             this.datacontext = datacontext;
         }
-        public  Task<Users> Login(string username, string password)
+        public async Task<Users> Login(string username, string password)
         {
-           
-            throw new NotImplementedException();
+
+            var user =await datacontext.tblUsers.FirstOrDefaultAsync(a=>a.UserName==username && a.Password==password);
+            if (user != null)
+            {
+                return user;
+            }
+            else
+            {
+                return null;
+            }
         }
 
        
@@ -46,9 +55,17 @@ namespace Datin.Api.Data.Repository
             throw new NotImplementedException();
         }
 
-        public Task<bool> UserExist(string username)
+        public async Task<bool> UserExist(string username)
         {
-            throw new NotImplementedException();
+            if (await datacontext.tblUsers.AnyAsync(a => a.UserName == username))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
     }
 }
