@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SPA-Server\\Datinserverfinal\\Datin.Api\\Datin.Api.csproj": {}
+    "D:\\DatinServer\\Datin.Api\\Datin.Api\\Datin.Api.csproj": {}
   },
   "projects": {
-    "D:\\SPA-Server\\Datinserverfinal\\Datin.Api\\Datin.Api.csproj": {
+    "D:\\DatinServer\\Datin.Api\\Datin.Api\\Datin.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SPA-Server\\Datinserverfinal\\Datin.Api\\Datin.Api.csproj",
+        "projectUniqueName": "D:\\DatinServer\\Datin.Api\\Datin.Api\\Datin.Api.csproj",
         "projectName": "Datin.Api",
-        "projectPath": "D:\\SPA-Server\\Datinserverfinal\\Datin.Api\\Datin.Api.csproj",
-        "packagesPath": "C:\\Users\\gigabyte\\.nuget\\packages\\",
-        "outputPath": "D:\\SPA-Server\\Datinserverfinal\\Datin.Api\\obj\\",
+        "projectPath": "D:\\DatinServer\\Datin.Api\\Datin.Api\\Datin.Api.csproj",
+        "packagesPath": "C:\\Users\\m.ganjinejad\\.nuget\\packages\\",
+        "outputPath": "D:\\DatinServer\\Datin.Api\\Datin.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\gigabyte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\m.ganjinejad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.6, )"
@@ -57,9 +61,13 @@
               "target": "Package",
               "version": "[3.1.6, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[6.7.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.7.1, )"
             }
           },
           "imports": [
@@ -80,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
